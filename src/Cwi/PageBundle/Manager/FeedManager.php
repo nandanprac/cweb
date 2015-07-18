@@ -32,7 +32,7 @@ class FeedManager extends BaseManager
 
 
         try{
-            $response = $client->get('questions',array('query' => array('limit' => $limit,'offset'=>$offset,$params)));
+            $response = $client->get('questions',array('query' => array('limit' => $limit,'offset'=>$offset, 'state' => 'answered',$params)));
             $Feeds=json_decode($response->getBody());
             $TotalPages=ceil($Feeds->count/$limit) - 1;
             //echo $page.'--->'.$TotalPages;die;

@@ -14,4 +14,11 @@ class DefaultController extends Controller
     {
         return $this->render('default/index.html.twig');
     }
+    /**
+     * @Route("/app/download", name="homepage")
+     */
+    public function mobileAction()
+    {
+    	return $this->render('CwiPageBundle::download.html.twig');
+    }
 }

@@ -21,7 +21,7 @@ framework:
     #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
-        #assets_version: SomeVersionScheme
+        #_s_version: SomeVersionScheme
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
@@ -36,7 +36,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
-            weburl: "http://www.consultsymweb.com/"
+            weburl: "http://www.consultweb.local/"
 
 # Assetic Configuration
 assetic:

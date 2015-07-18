@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download the App now</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:widgets:csp" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/">
+
+    <title>{% block title %}Consult Web{% endblock %}</title>
+
+    {#{% stylesheets '@jquery_bootstrap_css' '@CwiPageBundle/Resources/public/css/*' %}#}
+    {% stylesheets filter='cssrewrite'
+        'bundles/cwipage/css/*' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+</head>
+<body>
+
+{% block navigation %}
+    {% include 'CwiPageBundle::header.html.twig' %}
+{% endblock %}
+
+
+
+<div class = "mobile container">
+	<a href="">< Health Feeds</a>
+	<div class="row">
+		<div class="col-md-12 content">
+				<h2>Ask Doctors unanswered health questions with your Health App</h2>
+
+				<div class = "app-links">
+						<a class="app-link" href="http://app.appsflyer.com/com.practo.fabric?pid=landingpage&amp;c=Original" target="_parent">
+                        <img src="https://www.practo.com/assets/images/android-appstore.png"></a>
+
+                    <a class="app-link" href="http://app.appsflyer.com/id953772015?pid=landingpage&amp;c=original" target="_parent">
+                        <img alt="" src="https://www.practo.com/assets/images/ios-appstore.png" title="IOS">
+                    </a>
+
+				</div>
+
+
+				<div class = "sms-form">
+				</br>
+				<strong>GET THE APP LINK</strong>
+					</br>
+				</br>
+				<form class="form-inline">
+				 
+				 
+				  <input id="input-number" name="mobile_number" class="input-text font-18" type="text" value="" maxlength="10" placeholder="Enter your mobile phone no.">
+
+				  <input class="submit" type="submit" value="Get app link">
+				</form>
+				</br>	
+				<div class="missed-call">
+                        or leave a missed call at 080-674-15571
+                  </div>
+
+
+				</div>
+
+		</div>
+
+		<div class="col-md-12 preview">
+			<img src= "{{ asset('assets/img/patient.png') }}">
+
+		</div>
+
+
+	</div>
+</div>
+	</br>
+	<div class="blue-cover">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8" data-twittr-id="twttr-sandbox-0">
+					<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The doctor asks me to download the <a href="http://t.co/4gyCrgTUUg">http://t.co/4gyCrgTUUg</a> app and book an appointment any time! Sweet.</p>&mdash; Frootifer ❀(*´◡`*)❀ (@Oinkoo) <a href="https://twitter.com/Oinkoo/status/539995863733383169">December 3, 2014</a></blockquote>
+				</div>
+				
+				<div class="col-md-8" data-twittr-id="twttr-sandbox-1">
+					<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The recommendations for Sports Injury Specialists on <a href="https://twitter.com/Practo">@Practo</a> is pretty impressive! 👍🏻Check out their <a href="https://twitter.com/hashtag/Lifemein?src=hash">#Lifemein</a> TVC: <a href="http://t.co/gjh6jORcFi">http://t.co/gjh6jORcFi</a></p>&mdash; Saina Nehwal (@NSaina) <a href="https://twitter.com/NSaina/status/588287996648120320">April 15, 2015</a></blockquote>
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						
+				</div>
+
+				<div class="col-md-8" data-twittr-id="twttr-sandbox-2">
+					<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Checked out the <a href="https://twitter.com/Practo">@Practo</a> <a href="https://twitter.com/hashtag/Lifemein?src=hash">#Lifemein</a> TVC. Going to find my next pediatrician &amp; physiotherapist from here! <a href="http://t.co/aNpANT5Npz">http://t.co/aNpANT5Npz</a></p>&mdash; Lara Dutta Bhupathi (@LaraDutta) <a href="https://twitter.com/LaraDutta/status/588273241296396288">April 15, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>	
+			</div>
+
+		</div>
+
+	</div>	
+	
+
+ <div class="container">
+
+		<div>
+		{% block footer %}
+		        {% include 'CwiPageBundle::footer.html.twig' %}
+		    {% endblock %}
+		</div>
+
+	</div>
+
+
+	{% javascripts '@jquery_bootstrap_js' '@angularjs' '@infscroll' %}
+<script src="{{ absolute_url(asset_url) }}"></script>
+{% endjavascripts %}
+
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+
+</body>
+</html>
+
+
